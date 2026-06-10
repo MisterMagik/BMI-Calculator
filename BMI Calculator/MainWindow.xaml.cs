@@ -17,8 +17,10 @@ namespace BMI_Calculator
     public partial class MainWindow : Window
     {
 
-        private double _height;
-        private double _weight;
+        private double _userHeight;
+        private double _userWeight;
+        //private double _height;
+        //private double _weight;
         public MainWindow()
         {
             InitializeComponent();
@@ -41,7 +43,9 @@ namespace BMI_Calculator
         {
             HeightTextBox.Clear();
             WeightTextBox.Clear();
-            ResultLabel.Content = string.Empty;
+            ResultLabel.Content = "BMI: -";
+            _userHeight = 0;
+            _userWeight = 0;
         }
     }
 }
