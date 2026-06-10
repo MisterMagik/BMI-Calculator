@@ -28,9 +28,9 @@ namespace BMI_Calculator
 
         private void CalculateButtonClick(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(HeightTextBox.Text, out _height) && double.TryParse(WeightTextBox.Text, out _weight))
+            if (double.TryParse(HeightTextBox.Text, out _userHeight) && double.TryParse(WeightTextBox.Text, out _userWeight))
             {
-                double bmi = _weight / (_height * _height);
+                double bmi = _userWeight / (_userHeight * _userHeight);
                 ResultLabel.Content = $"BMI: {bmi}";
             }
             else
