@@ -17,8 +17,8 @@ namespace BMI_Calculator
     public partial class MainWindow : Window
     {
 
-        private double height;
-        private double weight;
+        private double _height;
+        private double _weight;
         public MainWindow()
         {
             InitializeComponent();
@@ -26,9 +26,9 @@ namespace BMI_Calculator
 
         private void CalculateButtonClick(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(HeightTextBox.Text, out height) && double.TryParse(WeightTextBox.Text, out weight))
+            if (double.TryParse(HeightTextBox.Text, out _height) && double.TryParse(WeightTextBox.Text, out _weight))
             {
-                double bmi = weight / (height * height);
+                double bmi = _weight / (_height * _height);
                 ResultLabel.Content = $"BMI: {bmi}";
             }
             else
